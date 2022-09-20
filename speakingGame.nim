@@ -7,7 +7,7 @@ type
 
 proc initQuestions(): seq[Question] =
   for idx in 0..wordList.len - 1:
-    result.add (wordList[idx], newSound(joinPath(currentSourcePath.parentDir(),
+    result.add (wordList[idx], newSound(joinPath(getAppDir(),
         "sounds", wordList[idx] & ".wav")))
 
 proc exit(input: string): bool =
